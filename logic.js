@@ -3,10 +3,10 @@ let inputdirection ={x:0 , y:0};
 let score = 0;
 let snakearray=[{x:5 , y : 13}];
  jsfood ={x: 6, y :10};
-const bewafaaudio4k = new Audio('imageandsound/song.mp3');
+const bewafaaudio4k = new Audio('song.mp3');
 //let speed=3;
-const lostsound = new Audio('imageandsound/mix.mp3');
-const fdsound = new Audio('imageandsound/food.mp3');
+const lostsound = new Audio('mix.mp3');
+const fdsound = new Audio('food.mp3');
 var speed= prompt("choose the speed loser 😈 " ,3);
 
 let pausetime=0;
