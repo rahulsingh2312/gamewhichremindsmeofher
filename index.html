@@ -7,24 +7,45 @@
     <title>saanp 🐍</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> <div>
+    <div id="pop-up">
+        <span class="right"> <button onclick="resumefunction()" >🗙 </button> </span>
+        THIS GAME HAS BEEN PAUSED 
+        <img  width="90%" src="pause.jpeg">
+        <img src="silly-cat-image.jpg" width="90%">
+    <br>
+        <h1>  <button class="resumebuttonpop" onclick="resumefunction()">resume game ▶️</button>
+             <button class="musicover"  onclick="musicend()"> stop music 🔇</button>
+             <button class="musicover"  onclick="musicstart()"> start music 🎶🎷</button>
+        </div></span>
+      
+        </div></h1> 
+    
 <div id="body">
+    
     <div id="grid"></div>
 </div>
 
-<div id="title">friends <3</div>
-   
+<div id="title"> <span id="friends">saanp 🐍</span> <span class="right"><button class="pausebutton" onclick="pausefunction()">⏸️</button>
+    <button class="resumebutton" onclick="settings()"  >🏃‍♂️</button></div></span></div>
+   <div>
+    &nbsp;<br>
+   </div>
 <div id="upbutton">
-    <button class="buton" onclick="gotop()">&nbsp;⬆️&nbsp;</button></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="buton" onclick="gotop()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬆️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></div>
 <div id="side">
     <span id="side-left-button">  <button class="buton" onclick="goleft()">&nbsp;&nbsp;&nbsp;⬅️&nbsp;&nbsp;&nbsp;</button></span>
         <span id="side-right-button"> <button class="buton" onclick="goright()">&nbsp;&nbsp;&nbsp;➡️&nbsp;&nbsp;&nbsp;</button>
  </span></div>
  <div id="downbutton">
-    <button class="buton" onclick="godown()">&nbsp;⬇️&nbsp;</button>
+    <button class="buton" onclick="godown()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 </div>
-<div id="scorebox">score :</div>
+
+<div id="scorebox">score :   </div>
+    
+
 <div id="hiscorebox"> hiscore:</div>
+</div>
 <script src="logic.js">
     
 </script>
