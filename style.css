@@ -13,8 +13,21 @@
    height: 100vh;*/
     justify-content: center;
 }
+#pop-up{
+   
+    position: absolute;
+    opacity: 0;
+    background-color: aliceblue;
+   right: 5%;
+   left: 5%;
+   top: 5%;
+   padding: 2%;
+   border:thick double #32a1ce;
+   overflow: hidden;
+}
 #grid{
     display: grid;
+   
     margin: 0%;
     background: linear-gradient(rgb(192, 246, 226),rgb(0, 255, 123)) ;
     grid-template-rows: repeat(18, 1fr);
@@ -23,11 +36,12 @@
    height: 70vh;
    border: solid brown 1vw ;
 }
-#hiscore, #scorebox{
+#hiscore, #scorebox {
     justify-content: left;
     display:flex;
 }
-#upbutton , #downbutton, #side,#title{
+
+ #downbutton, #side ,#upbutton{
 
     justify-content: center;
     display:flex;
@@ -59,4 +73,43 @@ background-color:deeppink ;
   
     border-radius: 10%;
     box-shadow: 7px cornflowerblue;
+}
+
+ 
+   #friends{
+ position: absolute;
+ right: 36%;
+ 
+}
+.right{
+   float: right;
+   }
+.resumebuttonpop , .musicover{
+    font-size: larger;
+    background-color: #c29b00;
+  left: 20;
+  right: 20;
+}
+
+.musicover:active{
+    background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.pausebutton:active{
+    background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.resumebutton:active{
+    background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.disable{
+    pointer-events: none;
+   }
+.enable{
+    pointer-events: all;
 }
