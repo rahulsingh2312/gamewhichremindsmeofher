@@ -11,29 +11,91 @@ var speed= prompt("choose the speed loser 😈 " ,3);
 let pausebuttonjs = false;
 let musicplaying = true;
 let pausetime=0;
+let nightvalue = false;
 function musicend(){
- bewafaaudio4k.pause();
- musicplaying = false;
+    if(musicplaying){
+        bewafaaudio4k.pause();
+        musicplaying = false;
+        return;
+    }
+    else{
+ bewafaaudio4k.play();
+ musicplaying = true;
+    }
+}
+//function musicstart(){
+//bewafaaudio4k.play();
 
-}
-function musicstart(){
-bewafaaudio4k.play();
-musicplaying=true;
-}
+//musicplaying=true;
+//}
 //.
+var bodycolor = document.getElementById("body");
+var gridcolor = document.getElementById("grid");
+//var buttoncolor = document.getElementId("nightbuts");
+function nightmode(){
 
+    if(nightvalue){
+       //var bodycolor1 = document.getElementById("body");
+       bodycolor.classList.remove('nightmode1_body');
+       bodycolor.classList.add('lightmode1_body');
+       console.log("lightmode");
+   //  buttoncolor.classList.remove('pausebutton');
+   var nightlightbutons = document.getElementById("nightbuts");
+   nightlightbutons.classList.remove('pausebutton');
+   nightlightbutons.classList.add('lightmode1_button');
+   nightlightbutons.classList.remove('nightmode1_button');
+   var nightlightbutons2 = document.getElementById("nightbuts2");
+   nightlightbutons2.classList.remove('pausebutton');
+   nightlightbutons2.classList.add('lightmode1_button');
+   nightlightbutons2.classList.remove('nightmode1_button');
+    // buttoncolor.classList.add('nightmode1_button');
+      // buttoncolor.classList.add('lightmode1_button');
+       gridcolor.classList.remove('nightmode2_grid');
+       gridcolor.classList.add('lightmode2_grid');
+       gridcolor.classList.remove('nightmode2_grid');
+        nightvalue = false;
+      
+     return;
+     }
+     else{
+    console.log("nightmode");
+    //var bodycolor = document.getElementById("body");
+    var nightlightbutons = document.getElementById("nightbuts");
+   bodycolor.classList.add('nightmode1_body');
+   nightlightbutons.classList.remove('pausebutton');
+   nightlightbutons.classList.remove('lightmode1_button');
+   nightlightbutons.classList.add('nightmode1_button');
+    var nightlightbutons2 = document.getElementById("nightbuts2");
+  
+   nightlightbutons2.classList.remove('pausebutton');
+   nightlightbutons2.classList.remove('lightmode1_button');
+   nightlightbutons2.classList.add('nightmode1_button');
+     
+    gridcolor.classList.remove('lightmode2_grid');
+    gridcolor.classList.remove('grid1');
+   
+    gridcolor.classList.add('nightmode2_grid');
+    nightvalue = true;
+    return;
+}
+}
 
 function pausefunction(){
     pausebuttonjs = true;
     var opac = document.getElementById("pop-up");
     opac.style.opacity=1;
     opac.classList.add('enable');
+    var titlebar = document.getElementById("friends");
+    titlebar.style.opacity=0;
 }
 function resumefunction(){
+    var titlebar = document.getElementById("friends");
+    titlebar.style.opacity=1;
     pausebuttonjs = false;
     var opac = document.getElementById("pop-up");
     opac.style.opacity=0;
     opac.classList.add('disable');
+    
     
 }
 function settings(){
