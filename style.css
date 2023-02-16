@@ -82,7 +82,14 @@ background-color:deeppink ;
  
 }
 .right{
+    float: right;
+}
+.rightbuttonsofpuse{
+    position: absolute;
+    top: 92%;
+    left:70%;
    float: right;
+   
    }
 .resumebuttonpop , .musicover{
     font-size: larger;
@@ -96,7 +103,16 @@ background-color:deeppink ;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+.pausebutton , .resumebutton{
+    background-color: aqua;
+    font-size: 25px;
+}
 .pausebutton:active{
+    background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.resumebuttonpop:active{
     background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
