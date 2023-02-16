@@ -8,17 +8,45 @@ const bewafaaudio4k = new Audio('song.mp3');
 const lostsound = new Audio('mix.mp3');
 const fdsound = new Audio('food.mp3');
 var speed= prompt("choose the speed loser 😈 " ,3);
-
+let pausebuttonjs = false;
+let musicplaying = true;
 let pausetime=0;
+function musicend(){
+ bewafaaudio4k.pause();
+ musicplaying = false;
+
+}
+function musicstart(){
+bewafaaudio4k.play();
+musicplaying=true;
+}
 //.
+
+
+function pausefunction(){
+    pausebuttonjs = true;
+    var opac = document.getElementById("pop-up");
+    opac.style.opacity=1;
+    opac.classList.add('enable');
+}
+function resumefunction(){
+    pausebuttonjs = false;
+    var opac = document.getElementById("pop-up");
+    opac.style.opacity=0;
+    opac.classList.add('disable');
+    
+}
+function settings(){
+     speed= prompt("choose the speed loser 😈 " ,5);
+}
+
 function gotop(){
     console.log("up");
 // console.log(inputdirection);
    
-
     inputdirection.x=0;
     inputdirection.y=-1;
-    if(inputdirection = {x:0,y:-1}){
+    if(inputdirection = {x:0,y:-1}&& musicplaying==true){
         bewafaaudio4k.play();
         return
     }
@@ -28,7 +56,7 @@ function godown(){
     console.log("down");
     inputdirection.x=0;
     inputdirection.y=1;
-    if(inputdirection = {x:0,y:1}){
+    if(inputdirection = {x:0,y:1}&& musicplaying==true){
         bewafaaudio4k.play();
         return
     }
@@ -38,7 +66,7 @@ function goleft(){
     console.log("left");
     inputdirection.x=-1;
     inputdirection.y=0;
-    if(inputdirection = {x:-1,y:0}){
+    if(inputdirection = {x:-1,y:0}&& musicplaying==true){
         bewafaaudio4k.play();
         return
     }
@@ -48,7 +76,7 @@ function goright(){
     console.log("right");
     inputdirection.x=1;
     inputdirection.y=0;
-    if(inputdirection = {x:1,y:0}){
+    if(inputdirection = {x:1,y:0}&& musicplaying==true){
         bewafaaudio4k.play();
         return
     }
@@ -56,6 +84,7 @@ function goright(){
 }
 // sppeed
 function main(ctime){
+ 
     window.requestAnimationFrame(main);
     if((ctime-pausetime)/1000 <1/speed){
         return;
@@ -78,10 +107,15 @@ function ifclash(snake){
 }
 
 function gameengine(){
-  
+    if(pausebuttonjs){
+        return;
+    }
+    
+    if(snakearray[0].x===jsfood.x && snakearray[0].y === jsfood.y && musicplaying==true){
+        fdsound.play();}
     //eat food
     if(snakearray[0].x===jsfood.x && snakearray[0].y === jsfood.y){
-        fdsound.play(); 
+        
         score +=1;
         if(score>hiscoreval){
             hiscoreval = score;
@@ -140,6 +174,7 @@ snakearray.forEach((e, index)=>{
     grid.appendChild(snakeElement);
 });
  //food
+
  foodElement= document.createElement('div');
  foodElement.style.gridRowStart=jsfood.y;
  foodElement.style.gridColumnStart=jsfood.x;
@@ -168,6 +203,7 @@ window.addEventListener('keydown', e =>{
             console.log("ArrowUp");
             inputdirection.x = 0;
             inputdirection.y = -1;
+            
             break;
 
         case "ArrowDown":
@@ -192,4 +228,5 @@ window.addEventListener('keydown', e =>{
     }
 
 });
+
 
