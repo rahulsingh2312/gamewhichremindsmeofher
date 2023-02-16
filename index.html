@@ -7,7 +7,7 @@
     <title>saanp 🐍</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> <div>
+<body id="body"> <div>
     <div id="pop-up">
         <span class="right"> <button onclick="resumefunction()" >🗙 </button> </span>
         THIS GAME HAS BEEN PAUSED 
@@ -15,15 +15,16 @@
         <img src="silly-cat-image.jpg" width="90%">
     <br>
         <h1>  <button class="resumebuttonpop" onclick="resumefunction()">resume game ▶️</button>
-             <button class="musicover"  onclick="musicend()"> stop music 🔇</button>
-             <button class="musicover"  onclick="musicstart()"> start music 🎶🎷</button>
+            <button class="musicover2" onclick="nightmode()">🌙/☀️mode</button>
+             <button class="musicover"  onclick="musicend()"> stop /start music 🎶🔇</button>
+          <!--  <button class="musicover"  onclick="musicstart()"> start music 🎶🎷</button>-->
         </div></span>
       
         </div></h1> 
     <div id="opacity">
-<div id="body">
+<div onclick="nightmode()" id="container">
     
-    <div id="grid"></div>
+    <div class="grid1" id="grid" ></div>
 </div>
 
 <div id="title"> <span id="friends">saanp 🐍</span> </div>
@@ -42,11 +43,11 @@
 
 <span class="lefting" id="scorebox">score :   </span>
     
-<span class="rightbuttonsofpuse"><button class="pausebutton" onclick="pausefunction()">pause⏸️</button></span><br>
+<span class="rightbuttonsofpuse"><button id="nightbuts" class="pausebutton" onclick="pausefunction()">pause⏸️</button></span><br>
 <span class="lefting" id="hiscorebox"> hiscore:</span>
 
 
-<span class="rightbuttonsofpuse"><button class="resumebutton" onclick="settings()" >speed🏃‍♂️</button></span>
+<span class="rightbuttonsofpuse"><button id="nightbuts2" class="pausebutton" onclick="settings()" >speed🏃‍♂️</button></span>
 </div>
 
 
