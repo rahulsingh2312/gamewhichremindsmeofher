@@ -46,9 +46,9 @@ function gotop(){
    
     inputdirection.x=0;
     inputdirection.y=-1;
-    if(inputdirection = {x:0,y:-1}&& musicplaying==true){
-        bewafaaudio4k.play();
-        return
+    if(inputdirection = {x:0,y:-1}){
+        if(musicplaying){bewafaaudio4k.play();
+        }return
     }
   
 }
@@ -56,9 +56,9 @@ function godown(){
     console.log("down");
     inputdirection.x=0;
     inputdirection.y=1;
-    if(inputdirection = {x:0,y:1}&& musicplaying==true){
-        bewafaaudio4k.play();
-        return
+    if(inputdirection = {x:0,y:1}){
+       if(musicplaying){ bewafaaudio4k.play();
+        }return
     }
   
 }
@@ -66,9 +66,9 @@ function goleft(){
     console.log("left");
     inputdirection.x=-1;
     inputdirection.y=0;
-    if(inputdirection = {x:-1,y:0}&& musicplaying==true){
-        bewafaaudio4k.play();
-        return
+    if(inputdirection = {x:-1,y:0}){
+       if(musicplaying){ bewafaaudio4k.play();
+        }return
     }
   
 }
@@ -76,9 +76,9 @@ function goright(){
     console.log("right");
     inputdirection.x=1;
     inputdirection.y=0;
-    if(inputdirection = {x:1,y:0}&& musicplaying==true){
-        bewafaaudio4k.play();
-        return
+    if(inputdirection = {x:1,y:0}){
+       if(musicplaying){ bewafaaudio4k.play();
+        }return
     }
   
 }
@@ -140,9 +140,12 @@ function gameengine(){
      snakearray[0].y += inputdirection.y;
     
     //clash
-    if (ifclash(snakearray)){
+    if (ifclash(snakearray) && musicplaying==true){
         lostsound.play();
         bewafaaudio4k.pause();
+    }
+    if (ifclash(snakearray)){
+      
         score=0;
         scorebox.innerHTML ="score:"+ score;
       
@@ -195,9 +198,11 @@ else{
 }
 
 
-window.addEventListener('keydown', e =>{
+
+window.addEventListener('keydown' , e =>{
     inputdirection = {x: 0, y: 1} // Start the game
-    bewafaaudio4k.play();
+    if(musicplaying){
+    bewafaaudio4k.play();}
     switch (e.key) {
         case "ArrowUp":
             console.log("ArrowUp");
@@ -228,5 +233,4 @@ window.addEventListener('keydown', e =>{
     }
 
 });
-
 
