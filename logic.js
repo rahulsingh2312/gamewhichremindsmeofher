@@ -102,18 +102,20 @@ function settings(){
      speed= prompt("choose the speed loser 😈 " ,5);
 }
 
-function gotop(){
+function gotopofworld(){
     console.log("up");
-// console.log(inputdirection);
+
    
     inputdirection.x=0;
     inputdirection.y=-1;
     if(inputdirection = {x:0,y:-1}){
-        if(musicplaying){bewafaaudio4k.play();
-        }return
+       if(musicplaying){bewafaaudio4k.play();
     }
-  
+
+        return
+    }
 }
+
 function godown(){
     console.log("down");
     inputdirection.x=0;
