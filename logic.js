@@ -84,7 +84,7 @@ function pausefunction(){
     pausebuttonjs = true;
     var opac = document.getElementById("pop-up");
     opac.style.opacity=1;
-    opac.classList.add('enable');
+  opac.style.pointerEvents="all";
     var titlebar = document.getElementById("friends");
     titlebar.style.opacity=0;
 }
@@ -94,7 +94,7 @@ function resumefunction(){
     pausebuttonjs = false;
     var opac = document.getElementById("pop-up");
     opac.style.opacity=0;
-    opac.classList.add('disable');
+    opac.style.pointerEvents="none";
     
     
 }
