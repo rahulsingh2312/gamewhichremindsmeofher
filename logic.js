@@ -150,7 +150,7 @@ function goright(){
 function main(ctime){
  
     window.requestAnimationFrame(main);
-    if((ctime-pausetime)/1000 <1/speed){
+    if((ctime-pausetime)/1500 <1/speed){
         return;
     }
    // console.log(ctime);
